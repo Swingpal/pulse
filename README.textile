@@ -14,11 +14,48 @@ h2. Requirements
 
 h2. Installation
 
+h3. Rails 3
+
+In your @Gemfile@:
+
+<pre>
+  <code>
+    gem 'rails-pulse', :lib => "pulse"
+  </code>
+</pre>
+
+Install the gem:
+
+<pre>
+  <code>
+    cd RAILS_ROOT
+    bundle install
+  </code>
+</pre>
+
+Finally, add a route to config/routes.rb:
+
+<pre>
+  <code>
+    match '/pulse', :to => 'pulse#pulse'
+  </code>
+</pre>
+
+This configures pulse to work at the 'pulse' URL.  If you would rather use a different URL:
+
+<pre>
+  <code>
+    match '/some/other/url', :to => 'pulse#pulse'
+  </code>
+</pre>
+
+h3. Rails 2
+
 In your @config/environment.rb@:
 
 <pre>
   <code>
-    config.gem 'rails-pulse', :source => "http://gemcutter.org/", :lib => "pulse"
+    config.gem 'rails-pulse', :lib => "pulse"
   </code>
 </pre>
 
