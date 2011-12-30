@@ -20,7 +20,7 @@ In your @Gemfile@:
 
 <pre>
   <code>
-    gem 'rails-pulse', :lib => "pulse"
+    gem 'rails-pulse', :require => "pulse"
   </code>
 </pre>
 
