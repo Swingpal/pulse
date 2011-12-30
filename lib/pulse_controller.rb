@@ -8,6 +8,8 @@ class PulseController < ActionController::Base
     alive = case ActiveRecord::Base.connection.adapter_name
             when "MySQL"
               (ActiveRecord::Base.connection.execute("select 1 from dual").num_rows rescue 0) == 1
+            when "Mysql2"
+              (ActiveRecord::Base.connection.execute("select 1 from dual").count rescue 0) == 1
             when "PostgreSQL"
               ActiveRecord::Base.connection.execute("select 1") rescue false
             end
