@@ -20,7 +20,7 @@ class PulseController < ActionController::Base
     end
   end
 
-  #cancel out loggin for the PulseController by defining logger as <tt>nil</tt>
+  #cancel out logging for the PulseController by defining logger as <tt>nil</tt>
   def logger
     nil
   end
